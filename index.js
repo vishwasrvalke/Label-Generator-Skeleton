@@ -202,7 +202,7 @@ function Step3(props) {
     return null
   } 
   return(
-    <React.Fragment>
+
     <div className="form-group">
       <label htmlFor="specs">ColorFamily</label>
       <input
@@ -240,7 +240,7 @@ function Step3(props) {
         </div>         
     </div>
 
-    </React.Fragment>
+    
   );
 }
 render(<MasterForm />, document.getElementById('root'))
