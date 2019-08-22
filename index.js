@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import './style.css';
+import {Step1}from'./step1.js';
+import{Step2}from'./step2.js';
+import{Step3}from './step3.js';
+import{Step4}from './step4.js';
+import{Step5}from './step5.js';
 
 class MasterForm extends React.Component {
   constructor(props) {
@@ -9,9 +14,12 @@ class MasterForm extends React.Component {
       currentStep: 1,
       ProductDetails:{ProductName:'',ITEMID : '',MFRNo:''} ,
       Pricing:{NewPrice: '',Price: '',OldPrice: ''},
-      specs:{ColorFamily:'',Manufacturer:'',Type:''} , 
+      specs:{ColorFamily:'',Manufacturer:'',Type:''} ,
+      fromAddress:{Name:'',Address:'',Province:'',ZipCode:''},
+      toAddress:{toName:'',toAddress:'',toProvince:'',toZipCode:''},
     }
   }
+  
 
   handleChange = event => {
     const {name, value} = event.target
@@ -22,16 +30,18 @@ class MasterForm extends React.Component {
    
   handleSubmit = event => {
     event.preventDefault()
-    const { ProductDetails, username, specs } = this.state
+    const { ProductDetails, Pricing, specs ,fromAddress,toAddress} = this.state
     alert(`Your registration detail: \n 
-           ProductDetails: ${{ProductDetails}} \n 
-           Pricing: ${{Pricing}} \n
-           specs: ${{specs}}`)
+           ProductDetails: ${ProductDetails}\n 
+           Pricing: ${Pricing} \n
+           specs: ${specs} \n
+           fromAddress:${fromAddress} \n
+           toAddress:${toAddress}`)
   }
   
   _next = () => {
     let currentStep = this.state.currentStep
-    currentStep = currentStep > currentStep ? 5: currentStep + 1
+    currentStep = currentStep > currentStep ? 6: currentStep + 1
     this.setState({
       currentStep: currentStep
     })
@@ -61,7 +71,7 @@ previousButton() {
 
 nextButton(){
   let currentStep = this.state.currentStep;
-  if(currentStep <5){
+  if(currentStep <6){
     return (
       <button 
         className="btn btn-primary float-right" 
@@ -96,8 +106,20 @@ nextButton(){
           handleChange={this.handleChange}
           password={this.state.password}
         />
+        <Step4
+          currentStep={this.state.currentStep} 
+          handleChange={this.handleChange}
+          password={this.state.password}
+        />
+        <Step5
+          currentStep={this.state.currentStep} 
+          handleChange={this.handleChange}
+          password={this.state.password}
+          handleSubmit={this.handleSubmit}
+        />
         {this.previousButton()}
         {this.nextButton()}
+        
 
       </form>
       </React.Fragment>
@@ -105,142 +127,4 @@ nextButton(){
   }
 }
 
-function Step1(props) {
-  if (props.currentStep !== 1) {
-    return null
-  } 
-  return(
-    <div className="form-group">
-      <label htmlFor="ProductDetails">Product Name</label>
-      <input
-        className="form-control"
-        id="ProductDetails"
-        name="ProductDetails"
-        type="text"
-        placeholder="Enter Product Name"
-        value={props.ProductName}
-        onChange={props.handleChange}
-        />
-      <div>
-      <label htmlFor="ProductDetails">ITEM ID</label>
-      <input
-        className="form-control"
-        id="ProductDetails"
-        name="ProductDetails"
-        type="text"
-        placeholder="Enter ITEM ID"
-        value={props.ITEMID}
-        onChange={props.handleChange}
-        />
-      </div>
-      <div>
-      <label htmlFor="ProductDetails">MFR No.</label>
-      <input
-        className="form-control"
-        id="ProductDetails"
-        name="ProductDetails"
-        type="text"
-        placeholder="Enter MFR No."
-        value={props.MFRNo}
-        onChange={props.handleChange}
-        />
-      </div>   
-    </div>
-  );
-}
-
-function Step2(props) {
-  if (props.currentStep !== 2) {
-    return null
-  } 
-  return(
-    <div className="form-group">
-      <label htmlFor="Pricing">New Price</label>
-      <input
-        className="form-control"
-        id="Pricing"
-        name="Pricing"
-        type="text"
-        placeholder="Enter NewPrice"
-        value={props.NewPrice}
-        onChange={props.handleChange}
-        />
-      <div>
-      <label htmlFor="Pricing">Price</label>
-      <input
-        className="form-control"
-        id="Pricing"
-        name="Pricing"
-        type="text"
-        placeholder="Enter Price"
-        value={props.Price}
-        onChange={props.handleChange}
-        />
-      <div>
-      <label htmlFor="Pricing">OldPrice</label>
-      <input
-        className="form-control"
-        id="Pricing"
-        name="Pricing"
-        type="text"
-        placeholder="Enter OldPrice"
-        value={props.OldPrice}
-        onChange={props.handleChange}
-        />
-      </div>
-      <div>
-    <textarea rows="4" cols="50">Product Overview</textarea>
-    </div>
-      </div>
-    </div>
-    
-  );
-}
-
-function Step3(props) {
-  if (props.currentStep !== 3) {
-    return null
-  } 
-  return(
-
-    <div className="form-group">
-      <label htmlFor="specs">ColorFamily</label>
-      <input
-        className="form-control"
-        id="specs"
-        name="specs"
-        type="specs"
-        placeholder="Enter ColorFamily"
-        value={props.ColorFamily}
-        onChange={props.handleChange}
-        />
-        <div>
-        <label htmlFor="specs">Manufacturer</label>
-      <input
-        className="form-control"
-        id="specs"
-        name="specs"
-        type="specs"
-        placeholder="Enter Manufacturer"
-        value={props.Manufacturer}
-        onChange={props.handleChange}
-        /> 
-        </div>
-        <div>
-        <label htmlFor="specs">Type</label>
-      <input
-        className="form-control"
-        id="specs"
-        name="specs"
-        type="specs"
-        placeholder="Enter Type"
-        value={props.Type}
-        onChange={props.handleChange}
-        /> 
-        </div>         
-    </div>
-
-    
-  );
-}
 render(<MasterForm />, document.getElementById('root'))
