@@ -10,6 +10,7 @@ export function Step4(props) {
     <div className="form-group">
       <p>From Address Details</p>
       <label htmlFor="fromAddress">Name</label>
+      <form onSubmit={props.handleFormSubmit}>
       <input
         className="form-control"
         id="fromAddress"
@@ -57,8 +58,8 @@ export function Step4(props) {
           required pattern="^\d{5,6}(?:[-\s]\d{4})?$"
         />
       </div>
+      </form>
     </div>
-
 
   );
 }

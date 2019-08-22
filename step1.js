@@ -7,6 +7,7 @@ export function Step1(props) {
   } 
   return(
     <div className="form-group">
+    <form onSubmit={props.handleSubmit}>
       <label htmlFor="ProductDetails">Product Name</label>
       <input
         className="form-control"
@@ -40,7 +41,8 @@ export function Step1(props) {
         value={props.MFRNo}
         onChange={props.handleChange}
         />
-      </div>   
+      </div> 
+      </form>  
     </div>
   );
 }

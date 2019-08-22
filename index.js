@@ -6,6 +6,9 @@ import{Step2}from'./step2.js';
 import{Step3}from './step3.js';
 import{Step4}from './step4.js';
 import{Step5}from './step5.js';
+import{Step6}from './step6.js';
+
+
 
 class MasterForm extends React.Component {
   constructor(props) {
@@ -16,7 +19,7 @@ class MasterForm extends React.Component {
       Pricing:{NewPrice: '',Price: '',OldPrice: ''},
       specs:{ColorFamily:'',Manufacturer:'',Type:''} ,
       fromAddress:{Name:'',Address:'',Province:'',ZipCode:''},
-      toAddress:{toName:'',toAddress:'',toProvince:'',toZipCode:''},
+      toAddress:{toName:'',toAddr:'',toProvince:'',toZipCode:''},
     }
   }
   
@@ -28,16 +31,32 @@ class MasterForm extends React.Component {
     })    
   }
    
-  handleSubmit = event => {
-    event.preventDefault()
-    const { ProductDetails, Pricing, specs ,fromAddress,toAddress} = this.state
-    alert(`Your registration detail: \n 
-           ProductDetails: ${ProductDetails}\n 
-           Pricing: ${Pricing} \n
-           specs: ${specs} \n
-           fromAddress:${fromAddress} \n
-           toAddress:${toAddress}`)
-  }
+   handleSubmit = (e) => {
+    e.preventDefault();
+
+    let items = [...this.state.items];
+
+    items.push({
+      ProductDetails: [...this.state.ProductDetails],
+      Pricing: [...this.state.Pricing],
+      specs: [...this.state.specs],
+      fromAddress:[...this.state.fromAddress],
+      toAddress:[...this.state.toAddress]
+
+    });
+
+    this.setState({
+      items,
+      ProductDetails: '',
+      Pricing: '',
+      specs:'',
+      fromAddress:'',
+      toAddress:''
+    });
+  };
+
+    
+  
   
   _next = () => {
     let currentStep = this.state.currentStep
@@ -104,19 +123,31 @@ nextButton(){
         <Step3 
           currentStep={this.state.currentStep} 
           handleChange={this.handleChange}
-          password={this.state.password}
+          specs={this.state.specs}
         />
         <Step4
           currentStep={this.state.currentStep} 
           handleChange={this.handleChange}
-          password={this.state.password}
+          fromAddress={this.state.fromAddress}
         />
         <Step5
           currentStep={this.state.currentStep} 
           handleChange={this.handleChange}
-          password={this.state.password}
+          toAddress={this.state.toAddress}
+        />
+        <Step6
+        currentStep={this.state.currentStep} 
+          handleChange={this.handleChange}
+          fromAdd={this.state.fromAddress}
+          toAdd={this.state.toAddress}
+          Prodname={this.state.ProductName}
+          itemid={this.state.ITEMID}
+          mfrno={this.state.MFRNo}
           handleSubmit={this.handleSubmit}
         />
+        
+        
+        
         {this.previousButton()}
         {this.nextButton()}
         

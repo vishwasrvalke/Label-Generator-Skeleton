@@ -8,6 +8,7 @@ export function Step2(props) {
   return(
     <div className="form-group">
       <label htmlFor="Pricing">New Price</label>
+      <form onSubmit={props.handleSubmit}>
       <input
         className="form-control"
         id="Pricing"
@@ -44,8 +45,7 @@ export function Step2(props) {
     <textarea rows="4" cols="50">Product Overview</textarea>
     </div>
       </div>
-    </div>
-    
-    
+      </form>
+    </div> 
   );
 }

@@ -9,6 +9,7 @@ export function Step5(props) {
   return(
     <div className="form-group">
     <p>To Address Details</p>
+    <form onSubmit={props.handleSubmit}>
       <label htmlFor="toAddress">Name</label>
       <input
         className="form-control"
@@ -27,7 +28,7 @@ export function Step5(props) {
         name="toAddress"
         type="text"
         placeholder="Enter Address"
-        value={props.toAddress}
+        value={props.toAddr}
         onChange={props.handleChange}
         /> 
         </div>
@@ -56,8 +57,9 @@ export function Step5(props) {
         inputMode="numeric" 
         required pattern="^\d{5,6}(?:[-\s]\d{4})?$"
         /> 
-        </div>   
-        <input type="submit" value="Submit" onClick={"return handleSubmit()"}/>          
+       </div>   
+        <input type="submit" value="generate"  /> 
+      </form>         
     </div>
 
     

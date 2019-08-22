@@ -9,6 +9,7 @@ export function Step3(props) {
 
     <div className="form-group">
       <label htmlFor="specs">ColorFamily</label>
+      <form onSubmit={props.handleSubmit}>
       <input
         className="form-control"
         id="specs"
@@ -41,7 +42,8 @@ export function Step3(props) {
         value={props.Type}
         onChange={props.handleChange}
         /> 
-        </div>         
+        </div> 
+        </form>        
     </div>
 
     
