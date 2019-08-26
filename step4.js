@@ -10,7 +10,7 @@ export function Step4(props) {
     <div className="form-group">
       <p>From Address Details</p>
       <label htmlFor="fromAddress">Name</label>
-      <form onSubmit={props.handleFormSubmit}>
+      <form onSubmit={props.handleSubmit}>
       <input
         className="form-control"
         id="fromAddress"

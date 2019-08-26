@@ -28,7 +28,7 @@ export function Step5(props) {
         name="toAddress"
         type="text"
         placeholder="Enter Address"
-        value={props.toAddr}
+        value={props.toAddress}
         onChange={props.handleChange}
         /> 
         </div>
@@ -58,7 +58,6 @@ export function Step5(props) {
         required pattern="^\d{5,6}(?:[-\s]\d{4})?$"
         /> 
        </div>   
-        <input type="submit" value="generate"  /> 
       </form>         
     </div>
 

@@ -20,15 +20,12 @@ export function Step2(props) {
         />
       <div>
       <label htmlFor="Pricing">Price</label>
-      <input
-        className="form-control"
-        id="Pricing"
-        name="Pricing"
-        type="text"
-        placeholder="Enter Price"
-        value={props.Price}
-        onChange={props.handleChange}
-        />
+      <select name="Pricing">
+      <option value={props.High} onChange={props.handleChange} >High</option>
+      <option value={props.Average}  onChange={props.handleChange}>Average</option>
+      <option value={props.Low}  onChange={props.handleChange}>Low</option>
+     <option value={props.Lowest}  onChange={props.handleChange}>Lowest</option>
+      </select>
       <div>
       <label htmlFor="Pricing">OldPrice</label>
       <input

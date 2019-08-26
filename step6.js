@@ -7,33 +7,101 @@ import{Step3}from './step3.js';
 import{Step4}from './step4.js';
 import{Step5}from './step5.js';
 export function Step6(props) {
-  if (props.currentStep !== 6) {
+  if (props.currentStep !== 6){
     return null
   } 
   return(
     <div className="form-group">
-     <p>Details</p>
-     <p>From: {props.fromAdd}</p>
+     <p>Details </p>
+     <p>From: {props.fromAddress} </p>
      
-     <p>To: {props.toAdd}</p>
+     <p>To: {props.toAddress} </p>
 
      <p>Product Detail</p>
-     <table>
-  <tr>
-    <th>Category</th>
-    <th>Product Details</th>
-    <th>Pricing</th> 
-    <th>specs</th>
-  </tr>
-  <tr>
-    <td>{props.Prodname}</td>
-    <td>{props.itemid}</td>
-    <td>{props.mfrno}</td>
-  </tr>
-  
-</table>
+  <div>   
+ <table>
+    <thead>
+      <tr>
+        <th>Product Name</th>
+        <th>ITEM ID</th>
+        <th>MFR No.</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr> 
+        <td>{props.pn}</td>
+        <td>data</td>
+        <td>data</td>
+      </tr>
+      <tr> 
+        <td>data</td>
+        <td>data</td>
+        <td>data</td>
+      </tr>
+      <tr>
+        <td>data</td>
+        <td>data</td>
+        <td>data</td> 
+      </tr>
+    </tbody>
+  </table>
+  <p>Pricing</p>
+  <table >
+    <thead>
+      <tr>
+        <th>New Price</th>
+        <th>Price</th>
+        <th>Old Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>data</td>
+        <td>data</td>
+        <td>data</td> 
+      </tr>
+      <tr>
+        <td>data</td>
+        <td>data</td>
+        <td>data</td> 
+      </tr>
+      <tr>
+        <td>data</td>
+        <td>data</td>
+        <td>data</td> 
+      </tr>
+    </tbody>
+  </table>
+  <p>Specs</p>
+  <table >
+    <thead>
+      <tr>
+        <th>Color Family</th>
+        <th>Manufacturer</th>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+      <td>data</td>
+        <td>data</td>
+        <td>data</td>
+        
+      </tr>
+      <tr>
+        <td>data</td>
+        <td>data</td>
+        <td>data</td>
+      </tr>
+      <tr>
+       <td>data</td>
+        <td>data</td>
+        <td>data</td>
+      </tr>
+    </tbody>
+  </table>
 
-     
+</div>
     </div>
   )
 }

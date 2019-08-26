@@ -15,7 +15,7 @@ export function Step1(props) {
         name="ProductDetails"
         type="text"
         placeholder="Enter Product Name"
-        value={props.ProductName}
+        value={props.pn}
         onChange={props.handleChange}
         />
       <div>

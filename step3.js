@@ -10,13 +10,31 @@ export function Step3(props) {
     <div className="form-group">
       <label htmlFor="specs">ColorFamily</label>
       <form onSubmit={props.handleSubmit}>
+      Red
       <input
         className="form-control"
         id="specs"
         name="specs"
-        type="text"
-        placeholder="Enter ColorFamily"
-        value={props.ColorFamily}
+        type="radio"
+        value={props.Red}
+        onChange={props.handleChange}
+        />
+        Blue
+        <input
+        className="form-control"
+        id="specs"
+        name="specs"
+        type="radio"
+        value={props.Blue}
+        onChange={props.handleChange}
+        />
+        Green
+        <input
+        className="form-control"
+        id="specs"
+        name="specs"
+        type="radio"
+        value={props.Green}
         onChange={props.handleChange}
         />
         <div>
