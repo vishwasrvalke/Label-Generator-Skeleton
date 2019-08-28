@@ -7,34 +7,34 @@ export function Step2(props) {
   } 
   return(
     <div className="form-group">
-      <label htmlFor="Pricing">New Price</label>
+      <label htmlFor="NewPrice">New Price</label>
       <form onSubmit={props.handleSubmit}>
       <input
         className="form-control"
-        id="Pricing"
-        name="Pricing"
+        id="NewPrice"
+        name="NewPrice"
         type="text"
         placeholder="Enter NewPrice"
-        value={props.NewPrice}
+        value={props.np}
         onChange={props.handleChange}
         />
       <div>
-      <label htmlFor="Pricing">Price</label>
-      <select name="Pricing">
-      <option value={props.High} onChange={props.handleChange} >High</option>
-      <option value={props.Average}  onChange={props.handleChange}>Average</option>
-      <option value={props.Low}  onChange={props.handleChange}>Low</option>
-     <option value={props.Lowest}  onChange={props.handleChange}>Lowest</option>
+      <label htmlFor="Price">Price</label>
+      <select name="Price">
+      <option value={props.p[0]} onChange={props.handleChange} >{props.p[0]}</option>
+      <option value={props.p[1]}  onChange={props.handleChange}>{props.p[1]}</option>
+      <option value={props.p[2]}  onChange={props.handleChange}>{props.p[2]}</option>
+     <option value={props.p[3]}  onChange={props.handleChange}>{props.p[3]}</option>
       </select>
       <div>
-      <label htmlFor="Pricing">OldPrice</label>
+      <label htmlFor="OldPrice">OldPrice</label>
       <input
         className="form-control"
-        id="Pricing"
-        name="Pricing"
+        id="OldPrice"
+        name="OldPrice"
         type="text"
         placeholder="Enter OldPrice"
-        value={props.OldPrice}
+        value={props.op}
         onChange={props.handleChange}
         />
       </div>

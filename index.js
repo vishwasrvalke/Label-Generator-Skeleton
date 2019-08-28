@@ -14,43 +14,43 @@ class MasterForm extends React.Component {
     this.state = {
       currentStep: 1,
 
-      ProductDetails:
-      {
+      
+  
         ProductName: '',
         ITEMID: '',
-        MFRNo: ''
-      },
+        MFRNo: '',
+      
 
-      Pricing:
-      {
+      
+      
         NewPrice: ''
-        , Price: { High: '', Average: '', Low: '', Lowest: '' }
-        , OldPrice: ''
-      },
+       , Price:['High','Average','Low','Lowest']
+        , OldPrice: '',
+      
 
-      specs:
-      {
-        ColorFamily: { Red: '', Blue: '', Green: '' },
+      
+      
+        ColorFamily:['Red','Blue','Green'],
         Manufacturer: '',
-        Type: ''
-      },
+        Type: ['1','2','3','4'],
+      
 
-      fromAddress:
-      {
+      
+      
         Name: '',
         Address: '',
         Province: '',
-        ZipCode: ''
-      },
+        ZipCode: '',
+      
 
-      toAddress:
-      {
+      
         toName: '',
         toAddr: '',
         toProvince: '',
-        toZipCode: ''
-      },
+        toZipCode: '',
+      
     }
+    
   }
   handleChange = event => {
     const { name, value } = event.target
@@ -119,33 +119,53 @@ class MasterForm extends React.Component {
           <Step1
             currentStep={this.state.currentStep}
             handleChange={this.handleChange}
-            pn={this.state.ProductDetails.ProductName}
+            pn={this.state.ProductName}
+            pid = {this.state.ITEMID}
+            mfr = {this.state.MFRNo}
           />
           <Step2
             currentStep={this.state.currentStep}
             handleChange={this.handleChange}
-            Pricing={this.state.Pricing}
+            np={this.state.NewPrice}
+            p={...this.state.Price}
+            op={this.state.OldPrice}
           />
           <Step3
             currentStep={this.state.currentStep}
             handleChange={this.handleChange}
-            specs={this.state.specs}
+            c={...this.state.ColorFamily}
+            m= {this.state.Manufacturer}
+            t={...this.state.Type}
           />
           <Step4
             currentStep={this.state.currentStep}
             handleChange={this.handleChange}
-            fromAddress={this.state.fromAddress}
+            name={this.state.Name}
+            address={this.state.Address}
+            pro = {this.state.Province}
+            zip = {this.state.ZipCode}
           />
           <Step5
             currentStep={this.state.currentStep}
             handleChange={this.handleChange}
-            toAddress={this.state.toAddress}
+            toAddress={this.state.toAddr}
+            toname={this.state.toName}
+            topro={this.state.toProvince}
+            tozip={this.state.toZipCode}
           />
           <Step6
             currentStep={this.state.currentStep}
-            fromAddress
-            ={this.state.fromAddress.Address}
-            toAddr={this.state.toAddress.toAddr}
+            pn={this.state.ProductName}
+            pid = {this.state.ITEMID}
+            mfr = {this.state.MFRNo}
+            address={this.state.Address}
+            toAddress={this.state.toAddr}
+            np={this.state.NewPrice}
+            p={...this.state.Price}
+            op={this.state.OldPrice}
+            c={...this.state.ColorFamily}
+            m= {this.state.Manufacturer}
+            t={...this.state.Type}
             handleChange={this.handleChange}
 
           />

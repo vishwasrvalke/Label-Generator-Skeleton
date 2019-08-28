@@ -13,9 +13,9 @@ export function Step6(props) {
   return(
     <div className="form-group">
      <p>Details </p>
-     <p>From: {props.fromAddress} </p>
+     <p>From: {props.address} </p>
      
-     <p>To: {props.toAddress} </p>
+     <p>To: {props.toAddress}</p>
 
      <p>Product Detail</p>
   <div>   
@@ -30,18 +30,8 @@ export function Step6(props) {
     <tbody>
       <tr> 
         <td>{props.pn}</td>
-        <td>data</td>
-        <td>data</td>
-      </tr>
-      <tr> 
-        <td>data</td>
-        <td>data</td>
-        <td>data</td>
-      </tr>
-      <tr>
-        <td>data</td>
-        <td>data</td>
-        <td>data</td> 
+        <td>{props.pid}</td>
+        <td>{props.mfr}</td>
       </tr>
     </tbody>
   </table>
@@ -56,19 +46,9 @@ export function Step6(props) {
     </thead>
     <tbody>
       <tr>
-        <td>data</td>
-        <td>data</td>
-        <td>data</td> 
-      </tr>
-      <tr>
-        <td>data</td>
-        <td>data</td>
-        <td>data</td> 
-      </tr>
-      <tr>
-        <td>data</td>
-        <td>data</td>
-        <td>data</td> 
+        <td>{props.np}</td>
+        <td>{props.p}</td>
+        <td>{props.op}</td> 
       </tr>
     </tbody>
   </table>
@@ -83,24 +63,12 @@ export function Step6(props) {
     </thead>
     <tbody>
       <tr>
-      <td>data</td>
-        <td>data</td>
-        <td>data</td>
-        
-      </tr>
-      <tr>
-        <td>data</td>
-        <td>data</td>
-        <td>data</td>
-      </tr>
-      <tr>
-       <td>data</td>
-        <td>data</td>
-        <td>data</td>
+      <td>{props.c}</td>
+        <td>{props.m}</td>
+        <td>{props.t}</td>  
       </tr>
     </tbody>
   </table>
-
 </div>
     </div>
   )

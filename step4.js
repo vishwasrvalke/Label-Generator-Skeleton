@@ -9,50 +9,50 @@ export function Step4(props) {
   return (
     <div className="form-group">
       <p>From Address Details</p>
-      <label htmlFor="fromAddress">Name</label>
+      <label htmlFor="Name">Name</label>
       <form onSubmit={props.handleSubmit}>
       <input
         className="form-control"
-        id="fromAddress"
-        name="fromAddress"
-        type="fromAddress"
+        id="Name"
+        name="Name"
+        type="text"
         placeholder="Enter Name"
-        value={props.Name}
+        value={props.name}
         onChange={props.handleChange}
       />
       <div>
-        <label htmlFor="fromAddress">Address</label>
+        <label htmlFor="Address">Address</label>
         <input
           className="form-control"
-          id="fromAddress"
-          name="fromAddress"
-          type="fromAddress"
+          id="Address"
+          name="Address"
+          type="text"
           placeholder="Enter Address"
-          value={props.Address}
+          value={props.address}
           onChange={props.handleChange}
         />
       </div>
       <div>
-        <label htmlFor="fromAddress">Province</label>
+        <label htmlFor="Province">Province</label>
         <input
           className="form-control"
-          id="fromAddress"
-          name="fromAddress"
-          type="fromAddresss"
+          id="Province"
+          name="Province"
+          type="text"
           placeholder="Enter Province"
-          value={props.Province}
+          value={props.pro}
           onChange={props.handleChange}
         />
       </div>
       <div>
-        <label htmlFor="fromAddress">ZipCode</label>
+        <label htmlFor="ZipCode">ZipCode</label>
         <input
           className="form-control"
-          id="fromAddress"
-          name="fromAddress"
+          id="ZipCode"
+          name="ZipCode"
           type="numbers"
           placeholder="Enter ZipCode(numbers only)"
-          value={props.ZipCode}
+          value={props.zip}
           onChange={props.handleChange}
           inputMode="numeric"
           required pattern="^\d{5,6}(?:[-\s]\d{4})?$"

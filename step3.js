@@ -13,53 +13,85 @@ export function Step3(props) {
       Red
       <input
         className="form-control"
-        id="specs"
-        name="specs"
+        id="ColorFamily"
+        name="ColorFamily"
         type="radio"
-        value={props.Red}
+        value={props.c[0]}
         onChange={props.handleChange}
         />
         Blue
         <input
         className="form-control"
-        id="specs"
-        name="specs"
+        id="ColorFamily"
+        name="ColorFamily"
         type="radio"
-        value={props.Blue}
+        value={props.c[1]}
         onChange={props.handleChange}
         />
         Green
         <input
         className="form-control"
-        id="specs"
-        name="specs"
+        id="ColorFamily"
+        name="ColorFamily"
         type="radio"
-        value={props.Green}
+        value={props.c[2]}
         onChange={props.handleChange}
         />
         <div>
-        <label htmlFor="specs">Manufacturer</label>
+        <label htmlFor="Manufacturer">Manufacturer</label>
       <input
         className="form-control"
-        id="specs"
-        name="specs"
+        id="Manufacturer"
+        name="Manufacturer"
         type="text"
         placeholder="Enter Manufacturer"
-        value={props.Manufacturer}
+        value={props.m}
         onChange={props.handleChange}
         /> 
         </div>
         <div>
-        <label htmlFor="specs">Type</label>
+        <label htmlFor="Type">Type </label>
+        
+        {props.t[0]}
       <input
         className="form-control"
-        id="specs"
-        name="specs"
-        type="text"
-        placeholder="Enter Type"
-        value={props.Type}
+        id="Type"
+        name="Type"
+        type="checkbox"
+        value={props.t[0]}
         onChange={props.handleChange}
         /> 
+
+        {props.t[1]}
+      <input
+        className="form-control"
+        id="Type"
+        name="Type"
+        type="checkbox"
+        value={props.t[1]}
+        onChange={props.handleChange}
+        /> 
+
+        {props.t[2]}
+      <input
+        className="form-control"
+        id="Type"
+        name="Type"
+        type="checkbox"
+        value={props.t[2]}
+        onChange={props.handleChange}
+        /> 
+
+      {props.t[3]}
+      <input
+        className="form-control"
+        id="Type"
+        name="Type"
+        type="checkbox"
+        value={props.t[3]}
+        onChange={props.handleChange}
+        /> 
+
         </div> 
         </form>        
     </div>

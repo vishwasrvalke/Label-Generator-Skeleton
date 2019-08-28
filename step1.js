@@ -8,37 +8,37 @@ export function Step1(props) {
   return(
     <div className="form-group">
     <form onSubmit={props.handleSubmit}>
-      <label htmlFor="ProductDetails">Product Name</label>
+      <label htmlFor="ProductName">Product Name</label>
       <input
         className="form-control"
-        id="ProductDetails"
-        name="ProductDetails"
+        id="ProductName"
+        name="ProductName"
         type="text"
         placeholder="Enter Product Name"
         value={props.pn}
         onChange={props.handleChange}
         />
       <div>
-      <label htmlFor="ProductDetails">ITEM ID</label>
+      <label htmlFor="ITEMID">ITEM ID</label>
       <input
         className="form-control"
-        id="ProductDetails"
-        name="ProductDetails"
+        id="ITEMID"
+        name="ITEMID"
         type="text"
         placeholder="Enter ITEM ID"
-        value={props.ITEMID}
+        value={props.pid}
         onChange={props.handleChange}
         />
       </div>
       <div>
-      <label htmlFor="ProductDetails">MFR No.</label>
+      <label htmlFor="MFRNo">MFR No.</label>
       <input
         className="form-control"
-        id="ProductDetails"
-        name="ProductDetails"
+        id="MFRNo"
+        name="MFRNo"
         type="text"
         placeholder="Enter MFR No."
-        value={props.MFRNo}
+        value={props.mfr}
         onChange={props.handleChange}
         />
       </div> 
