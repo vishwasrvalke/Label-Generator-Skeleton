@@ -10,11 +10,11 @@ export function Step5(props) {
     <div className="form-group">
     <p>To Address Details</p>
     <form onSubmit={props.handleSubmit}>
-      <label htmlFor="toname">Name</label>
+      <label htmlFor="toName">Name</label>
       <input
         className="form-control"
-        id="toname"
-        name="toname"
+        id="toName"
+        name="toName"
         type="text"
         placeholder="Enter Name"
         value={props.toname}
@@ -33,11 +33,11 @@ export function Step5(props) {
         /> 
         </div>
         <div>
-        <label htmlFor="topro">Province</label>
+        <label htmlFor="toProvince">Province</label>
       <input
         className="form-control"
-        id="topro"
-        name="topro"
+        id="toProvince"
+        name="toProvince"
         type="text"
         placeholder="Enter Province"
         value={props.topro}
@@ -45,11 +45,11 @@ export function Step5(props) {
         /> 
         </div>
         <div>
-        <label htmlFor="tozip">ZipCode</label>
+        <label htmlFor="toZipCode">ZipCode</label>
       <input
         className="form-control"
-        id="tozip"
-        name="tozip"
+        id="toZipCode"
+        name="toZipCode"
         type="numbers"
         placeholder="Enter ZipCode(numbers only)"
         value={props.tozip}

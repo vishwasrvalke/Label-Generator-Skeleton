@@ -47,7 +47,7 @@ export function Step6(props) {
     <tbody>
       <tr>
         <td>{props.np}</td>
-        <td>{props.p}</td>
+        <td>{...props.p}</td>
         <td>{props.op}</td> 
       </tr>
     </tbody>
@@ -63,9 +63,9 @@ export function Step6(props) {
     </thead>
     <tbody>
       <tr>
-      <td>{props.c}</td>
+      <td>{...props.c}</td>
         <td>{props.m}</td>
-        <td>{props.t}</td>  
+        <td>{...props.t}</td>  
       </tr>
     </tbody>
   </table>
