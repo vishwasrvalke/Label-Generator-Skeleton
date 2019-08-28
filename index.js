@@ -50,6 +50,8 @@ class MasterForm extends React.Component {
         toZipCode: '',
       
     }
+     
+     this.handleChange = this.handleChange.bind(this);
     
   }
   handleChange = event => {
@@ -58,6 +60,8 @@ class MasterForm extends React.Component {
       [name]: value
     })
   }
+  
+
   handleSubmit = (e) => {
     e.preventDefault();
   }
@@ -129,6 +133,7 @@ class MasterForm extends React.Component {
             np={this.state.NewPrice}
             p={...this.state.Price}
             op={this.state.OldPrice}
+            
           />
           <Step3
             currentStep={this.state.currentStep}

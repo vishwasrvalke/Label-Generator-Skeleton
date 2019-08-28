@@ -55,7 +55,6 @@ export function Step5(props) {
         value={props.tozip}
         onChange={props.handleChange}
         inputMode="numeric" 
-        required pattern="^\d{5,6}(?:[-\s]\d{4})?$"
         /> 
        </div>   
       </form>         

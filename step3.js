@@ -50,9 +50,9 @@ export function Step3(props) {
         /> 
         </div>
         <div>
-        <label htmlFor="Type">Type </label>
+        <label htmlFor="Type">Type</label>
         
-        {props.t[0]}
+      {props.t[0]}
       <input
         className="form-control"
         id="Type"
@@ -62,7 +62,7 @@ export function Step3(props) {
         onChange={props.handleChange}
         /> 
 
-        {props.t[1]}
+      {props.t[1]}
       <input
         className="form-control"
         id="Type"
@@ -72,7 +72,7 @@ export function Step3(props) {
         onChange={props.handleChange}
         /> 
 
-        {props.t[2]}
+      {props.t[2]}
       <input
         className="form-control"
         id="Type"

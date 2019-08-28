@@ -20,11 +20,11 @@ export function Step2(props) {
         />
       <div>
       <label htmlFor="Price">Price</label>
-      <select name="Price">
-      <option value={props.p[0]} onChange={props.handleChange} >{props.p[0]}</option>
-      <option value={props.p[1]}  onChange={props.handleChange}>{props.p[1]}</option>
-      <option value={props.p[2]}  onChange={props.handleChange}>{props.p[2]}</option>
-     <option value={props.p[3]}  onChange={props.handleChange}>{props.p[3]}</option>
+      <select id="Price" onChange = {props.handleChange} value = {...props.p}>
+      <option value={props.p[0]} >{props.p[0]}</option>
+      <option value={props.p[1]} >{props.p[1]}</option>
+      <option value={props.p[2]} >{props.p[2]}</option>
+     <option value={props.p[3]} >{props.p[3]}</option>
       </select>
       <div>
       <label htmlFor="OldPrice">OldPrice</label>
