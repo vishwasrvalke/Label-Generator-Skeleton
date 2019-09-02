@@ -30,9 +30,9 @@ class MasterForm extends React.Component {
 
       
       
-        ColorFamily:['Red','Blue','Green'],
+        ColorFamily:'',
         Manufacturer: '',
-        Type: ['1','2','3','4'],
+        Type:'',
       
 
       
@@ -142,9 +142,9 @@ class MasterForm extends React.Component {
           <Step3
             currentStep={this.state.currentStep}
             handleChange={this.handleChange}
-            c={...this.state.ColorFamily}
+            c={this.state.ColorFamily}
             m= {this.state.Manufacturer}
-            t={...this.state.Type}
+            t={this.state.Type}
           />
           <Step4
             currentStep={this.state.currentStep}
@@ -172,9 +172,9 @@ class MasterForm extends React.Component {
             np={this.state.NewPrice}
             p={this.state.Price}
             op={this.state.OldPrice}
-            c={...this.state.ColorFamily}
+            c={this.state.ColorFamily}
             m= {this.state.Manufacturer}
-            t={...this.state.Type}
+            t={this.state.Type}
             handleChange={this.handleChange}
 
           />

@@ -16,7 +16,7 @@ export function Step3(props) {
         id="ColorFamily"
         name="ColorFamily"
         type="radio"
-        value={props.c[0]}
+        value="Red"
         onChange={props.handleChange}
         />
         Blue
@@ -25,7 +25,7 @@ export function Step3(props) {
         id="ColorFamily"
         name="ColorFamily"
         type="radio"
-        value={props.c[1]}
+        value="Blue"
         onChange={props.handleChange}
         />
         Green
@@ -34,7 +34,7 @@ export function Step3(props) {
         id="ColorFamily"
         name="ColorFamily"
         type="radio"
-        value={props.c[2]}
+        value="Green"
         onChange={props.handleChange}
         />
         <div>
@@ -52,43 +52,43 @@ export function Step3(props) {
         <div>
         <label htmlFor="Type">Type</label>
         
-      {props.t[0]}
+      1
       <input
         className="form-control"
         id="Type"
         name="Type"
         type="checkbox"
-        value={props.t[0]}
+        value="1"
         onChange={props.handleChange}
         /> 
 
-      {props.t[1]}
+      2
       <input
         className="form-control"
         id="Type"
         name="Type"
         type="checkbox"
-        value={props.t[1]}
+        value="2"
         onChange={props.handleChange}
         /> 
 
-      {props.t[2]}
+      3
       <input
         className="form-control"
         id="Type"
         name="Type"
         type="checkbox"
-        value={props.t[2]}
+        value="3"
         onChange={props.handleChange}
         /> 
 
-      {props.t[3]}
+      4
       <input
         className="form-control"
         id="Type"
         name="Type"
         type="checkbox"
-        value={props.t[3]}
+        value="4"
         onChange={props.handleChange}
         /> 
 
