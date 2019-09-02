@@ -24,7 +24,7 @@ class MasterForm extends React.Component {
       
       
         NewPrice: ''
-       , Price:['High','Average','Low','Lowest']
+       , Price:""
         , OldPrice: '',
       
 
@@ -52,7 +52,7 @@ class MasterForm extends React.Component {
     }
      
      this.handleChange = this.handleChange.bind(this);
-    
+     this.handleDropdownChange = this.handleDropdownChange.bind(this);
   }
   handleChange = event => {
     const { name, value } = event.target
@@ -61,6 +61,9 @@ class MasterForm extends React.Component {
     })
   }
   
+  handleDropdownChange(e) {
+    this.setState({Price : e.target.value });
+  }
 
   handleSubmit = (e) => {
     e.preventDefault();
@@ -131,8 +134,9 @@ class MasterForm extends React.Component {
             currentStep={this.state.currentStep}
             handleChange={this.handleChange}
             np={this.state.NewPrice}
-            p={...this.state.Price}
+            p={this.state.Price}
             op={this.state.OldPrice}
+            handleDropdownChange = {this.handleDropdownChange}
             
           />
           <Step3
@@ -166,7 +170,7 @@ class MasterForm extends React.Component {
             address={this.state.Address}
             toAddress={this.state.toAddr}
             np={this.state.NewPrice}
-            p={...this.state.Price}
+            p={this.state.Price}
             op={this.state.OldPrice}
             c={...this.state.ColorFamily}
             m= {this.state.Manufacturer}
