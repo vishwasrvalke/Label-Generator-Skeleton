@@ -25,7 +25,9 @@ class MasterForm extends React.Component {
       
         NewPrice: ''
        , Price:""
-        , OldPrice: '',
+        , OldPrice: ''
+        , Text:'',
+
       
 
       
@@ -136,6 +138,7 @@ class MasterForm extends React.Component {
             np={this.state.NewPrice}
             p={this.state.Price}
             op={this.state.OldPrice}
+            text={this.state.Text}
             handleDropdownChange = {this.handleDropdownChange}
             
           />
@@ -175,6 +178,7 @@ class MasterForm extends React.Component {
             c={this.state.ColorFamily}
             m= {this.state.Manufacturer}
             t={this.state.Type}
+            text ={this.state.Text}
             handleChange={this.handleChange}
 
           />

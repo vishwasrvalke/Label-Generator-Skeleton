@@ -12,12 +12,12 @@ export function Step6(props) {
   } 
   return(
     <div className="form-group">
-     <p>Details </p>
-     <p>From: {props.address} </p>
+     <h1>Details </h1>
+     <h2>From: {props.address} </h2>
      
-     <p>To: {props.toAddress}</p>
+     <h2>To: {props.toAddress}</h2>
 
-     <p>Product Detail</p>
+     <h2>Product Detail</h2>
   <div>   
  <table>
     <thead>
@@ -35,7 +35,7 @@ export function Step6(props) {
       </tr>
     </tbody>
   </table>
-  <p>Pricing</p>
+  <h2>Pricing</h2>
   <table >
     <thead>
       <tr>
@@ -52,7 +52,7 @@ export function Step6(props) {
       </tr>
     </tbody>
   </table>
-  <p>Specs</p>
+  <h2>Specs</h2>
   <table >
     <thead>
       <tr>
@@ -69,6 +69,10 @@ export function Step6(props) {
       </tr>
     </tbody>
   </table>
+</div>
+<div>
+<h2>Comments: </h2>
+<p>{props.text}</p>
 </div>
     </div>
   )
