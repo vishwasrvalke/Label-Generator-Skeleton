@@ -39,6 +39,7 @@ export function Step2(props) {
         />
       </div>
       <div>
+      <p>Enter Comments</p>
     <textarea id ="Text" name="Text" value ={props.text} onChange={props.handleChange} rows="4" cols="50" placeholder="enter comments">Product Overview</textarea>
     </div>
       </div>

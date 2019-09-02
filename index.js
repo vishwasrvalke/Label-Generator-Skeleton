@@ -121,7 +121,7 @@ class MasterForm extends React.Component {
     return (
       <React.Fragment>
         <h1>Label Generator</h1>
-        <p>Step {this.state.currentStep} </p>
+        <h2>Step {this.state.currentStep} </h2>
 
         <form onSubmit={this.handleSubmit}>
 
