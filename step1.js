@@ -7,8 +7,9 @@ export function Step1(props) {
   } 
   return(
     <div >
-    <form onSubmit={props.handleSubmit}>
-      <label htmlFor="ProductName">Product Name</label>
+    <h2>Product Details </h2>
+    <form >
+      <p>Product Name :</p>
       <input
         className="ProductName"
         id="ProductName"
@@ -19,7 +20,7 @@ export function Step1(props) {
         onChange={props.handleChange}
         />
       <div>
-      <label htmlFor="ITEMID">ITEM ID</label>
+      <p>ITEM ID : </p>
       <input
         className="ITEMID"
         id="ITEMID"
@@ -31,7 +32,7 @@ export function Step1(props) {
         />
       </div>
       <div>
-      <label htmlFor="MFRNo">MFR No.</label>
+      <p>MFR No. : </p>
       <input
         className="MFRNo"
         id="MFRNo"

@@ -12,12 +12,12 @@ export function Step6(props) {
   } 
   return(
     <div >
-     <h1>Details </h1>
-     <h2>From: {props.address} </h2>
+     <h2>Summary </h2>
+     <h3>From: {props.address} </h3>
      
-     <h2>To: {props.toAddress}</h2>
+     <h3>To: {props.toAddress}</h3>
 
-     <h2>Product Detail</h2>
+     <h2>Product Details</h2>
   <div>   
  <table>
     <thead>
@@ -52,7 +52,7 @@ export function Step6(props) {
       </tr>
     </tbody>
   </table>
-  <h2>Specs</h2>
+  <h2>Specifications</h2>
   <table >
     <thead>
       <tr>

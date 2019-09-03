@@ -8,9 +8,10 @@ export function Step3(props) {
   return(
 
     <div >
-      <label htmlFor="specs">ColorFamily</label>
-      <form onSubmit={props.handleSubmit}>
-      Red
+       <h2>Specifications</h2>
+      <p>ColorFamily : </p>
+      <form >
+        Red
       <input
         className="ColorFamily"
         id="ColorFamily"
@@ -38,7 +39,7 @@ export function Step3(props) {
         onChange={props.handleChange}
         />
         <div>
-        <label htmlFor="Manufacturer">Manufacturer</label>
+        <p>Manufacturer : </p>
       <input
         className="Manufacturer"
         id="Manufacturer"
@@ -50,7 +51,7 @@ export function Step3(props) {
         /> 
         </div>
         <div>
-        <p>Type</p>
+        <p>Type : </p>
         
       1
       <input

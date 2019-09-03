@@ -8,9 +8,9 @@ export function Step4(props) {
 
   return (
     <div >
-      <p>From Address Details</p>
-      <p>Name</p>
-      <form onSubmit={props.handleSubmit}>
+      <h2>From Address Details</h2>
+      <p>Name : </p>
+      <form >
       <input
         className="Name"
         id="Name"
@@ -21,7 +21,7 @@ export function Step4(props) {
         onChange={props.handleChange}
       />
       <div>
-        <p>Address</p>
+        <p>Address : </p>
         <input
           className="Address"
           id="Address"
@@ -33,7 +33,7 @@ export function Step4(props) {
         />
       </div>
       <div>
-        <p>Province</p>
+        <p>Province : </p>
         <input
           className="Province"
           id="Province"
@@ -45,7 +45,7 @@ export function Step4(props) {
         />
       </div>
       <div>
-        <p>ZipCode</p>
+        <p>ZipCode : </p>
         <input
           className="ZipCode"
           id="ZipCode"

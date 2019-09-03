@@ -67,9 +67,7 @@ class MasterForm extends React.Component {
     this.setState({Price : e.target.value });
   }
 
-  handleSubmit = (e) => {
-    e.preventDefault();
-  }
+  
 
 
 
@@ -123,7 +121,7 @@ class MasterForm extends React.Component {
         <h1>Label Generator</h1>
         <h2>Step {this.state.currentStep} </h2>
 
-        <form onSubmit={this.handleSubmit}>
+        <form >
 
           <Step1
             currentStep={this.state.currentStep}
