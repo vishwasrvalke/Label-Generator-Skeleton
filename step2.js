@@ -21,11 +21,11 @@ export function Step2(props) {
         />
       <div>
       <p>Price : </p>
-      <select id="Price" defaultValue={props.p}  onChange = {props.handleDropdownChange}  >
-      <option value="High"  >High</option>
-      <option value="Medium" >Medium</option>
-      <option value="Low"  >Low</option>
-     <option value="Lowest" >Lowest</option>
+      <select id="Price" defaultValue ={props.p}  onChange = {props.handleDropdownChange} >
+      <option value="High" >High</option>
+      <option value="Medium">Medium</option>
+      <option value="Low" >Low</option>
+     <option value="Lowest">Lowest</option>
       </select>
       <div>
       <p>OldPrice : </p>

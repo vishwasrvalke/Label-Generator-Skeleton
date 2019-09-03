@@ -24,7 +24,7 @@ class MasterForm extends React.Component {
       
       
         NewPrice: ''
-       , Price:""
+       , Price:"Low"
         , OldPrice: ''
         , Text:'',
 
