@@ -75,17 +75,17 @@ class MasterForm extends React.Component {
 
   _next = () => {
     let currentStep = this.state.currentStep
-    currentStep = currentStep > currentStep ? 6 : currentStep + 1
+    currentStep = 
     this.setState({
-      currentStep: currentStep
+      currentStep: currentStep +1
     })
   }
 
   _prev = () => {
     let currentStep = this.state.currentStep
-    currentStep = currentStep <= 1 ? 1 : currentStep - 1
+    currentStep = 
     this.setState({
-      currentStep: currentStep
+      currentStep: currentStep - 1
     })
   }
 
