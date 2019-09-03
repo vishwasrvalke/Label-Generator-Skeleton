@@ -11,7 +11,7 @@ export function Step6(props) {
     return null
   } 
   return(
-    <div className="form-group">
+    <div >
      <h1>Details </h1>
      <h2>From: {props.address} </h2>
      

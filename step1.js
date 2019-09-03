@@ -6,11 +6,11 @@ export function Step1(props) {
     return null
   } 
   return(
-    <div className="form-group">
+    <div >
     <form onSubmit={props.handleSubmit}>
       <label htmlFor="ProductName">Product Name</label>
       <input
-        className="form-control"
+        className="ProductName"
         id="ProductName"
         name="ProductName"
         type="text"
@@ -21,7 +21,7 @@ export function Step1(props) {
       <div>
       <label htmlFor="ITEMID">ITEM ID</label>
       <input
-        className="form-control"
+        className="ITEMID"
         id="ITEMID"
         name="ITEMID"
         type="text"
@@ -33,7 +33,7 @@ export function Step1(props) {
       <div>
       <label htmlFor="MFRNo">MFR No.</label>
       <input
-        className="form-control"
+        className="MFRNo"
         id="MFRNo"
         name="MFRNo"
         type="text"

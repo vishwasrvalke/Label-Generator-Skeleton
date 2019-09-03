@@ -6,11 +6,11 @@ export function Step2(props) {
     return null
   } 
   return(
-    <div className="form-group">
+    <div >
       <label htmlFor="NewPrice">New Price</label>
       <form >
       <input
-        className="form-control"
+        className="NewPrice"
         id="NewPrice"
         name="NewPrice"
         type="text"
@@ -29,7 +29,7 @@ export function Step2(props) {
       <div>
       <label htmlFor="OldPrice">OldPrice</label>
       <input
-        className="form-control"
+        className="OldPrice"
         id="OldPrice"
         name="OldPrice"
         type="text"

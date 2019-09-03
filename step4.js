@@ -7,12 +7,12 @@ export function Step4(props) {
   }
 
   return (
-    <div className="form-group">
+    <div >
       <p>From Address Details</p>
-      <label htmlFor="Name">Name</label>
+      <p>Name</p>
       <form onSubmit={props.handleSubmit}>
       <input
-        className="form-control"
+        className="Name"
         id="Name"
         name="Name"
         type="text"
@@ -21,9 +21,9 @@ export function Step4(props) {
         onChange={props.handleChange}
       />
       <div>
-        <label htmlFor="Address">Address</label>
+        <p>Address</p>
         <input
-          className="form-control"
+          className="Address"
           id="Address"
           name="Address"
           type="text"
@@ -33,9 +33,9 @@ export function Step4(props) {
         />
       </div>
       <div>
-        <label htmlFor="Province">Province</label>
+        <p>Province</p>
         <input
-          className="form-control"
+          className="Province"
           id="Province"
           name="Province"
           type="text"
@@ -45,9 +45,9 @@ export function Step4(props) {
         />
       </div>
       <div>
-        <label htmlFor="ZipCode">ZipCode</label>
+        <p>ZipCode</p>
         <input
-          className="form-control"
+          className="ZipCode"
           id="ZipCode"
           name="ZipCode"
           type="numbers"
@@ -55,7 +55,7 @@ export function Step4(props) {
           value={props.zip}
           onChange={props.handleChange}
           inputMode="numeric"
-          required pattern="^\d{5,6}(?:[-\s]\d{4})?$"
+          
         />
       </div>
       </form>

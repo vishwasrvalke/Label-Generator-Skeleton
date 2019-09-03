@@ -7,12 +7,12 @@ export function Step3(props) {
   } 
   return(
 
-    <div className="form-group">
+    <div >
       <label htmlFor="specs">ColorFamily</label>
       <form onSubmit={props.handleSubmit}>
       Red
       <input
-        className="form-control"
+        className="ColorFamily"
         id="ColorFamily"
         name="ColorFamily"
         type="radio"
@@ -21,7 +21,7 @@ export function Step3(props) {
         />
         Blue
         <input
-        className="form-control"
+        className="ColorFamily"
         id="ColorFamily"
         name="ColorFamily"
         type="radio"
@@ -30,7 +30,7 @@ export function Step3(props) {
         />
         Green
         <input
-        className="form-control"
+        className="ColorFamily"
         id="ColorFamily"
         name="ColorFamily"
         type="radio"
@@ -40,7 +40,7 @@ export function Step3(props) {
         <div>
         <label htmlFor="Manufacturer">Manufacturer</label>
       <input
-        className="form-control"
+        className="Manufacturer"
         id="Manufacturer"
         name="Manufacturer"
         type="text"
@@ -50,11 +50,11 @@ export function Step3(props) {
         /> 
         </div>
         <div>
-        <label htmlFor="Type">Type</label>
+        <p>Type</p>
         
       1
       <input
-        className="form-control"
+        className="Type"
         id="Type"
         name="Type"
         type="checkbox"
@@ -64,7 +64,7 @@ export function Step3(props) {
 
       2
       <input
-        className="form-control"
+        className="Type"
         id="Type"
         name="Type"
         type="checkbox"
@@ -74,7 +74,7 @@ export function Step3(props) {
 
       3
       <input
-        className="form-control"
+        className="Type"
         id="Type"
         name="Type"
         type="checkbox"
@@ -84,7 +84,7 @@ export function Step3(props) {
 
       4
       <input
-        className="form-control"
+        className="Type"
         id="Type"
         name="Type"
         type="checkbox"
