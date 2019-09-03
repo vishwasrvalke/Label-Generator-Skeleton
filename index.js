@@ -63,7 +63,7 @@ class MasterForm extends React.Component {
     })
   }
   
-  handleDropdownChange(e) {
+  handleDropdownChange =(e)=> {
     this.setState({Price : e.target.value });
   }
 
