@@ -131,13 +131,14 @@ class MasterForm extends React.Component {
   }
 
   render() {
+    
     return (
       <React.Fragment>
         <h1>Label Generator</h1>
         <h2>Step {this.state.currentStep} </h2>
 
         <form >
-
+        
           <Step1
             currentStep={this.state.currentStep}
             handleChange={this.handleChange}
