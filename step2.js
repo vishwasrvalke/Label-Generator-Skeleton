@@ -9,7 +9,10 @@ export function Step2(props) {
     <div >
       <h2>Pricing</h2>
       <p>New Price :</p>
+      
       <form >
+      
+    <div>
       <input
         className="NewPrice"
         id="NewPrice"
@@ -19,7 +22,11 @@ export function Step2(props) {
         value={props.np}
         onChange={props.handleChange}
         />
-      <div>
+    </div>
+
+    
+    
+    <div>
       <p>Price : </p>
       <select id="Price" defaultValue ={props.p}  onChange = {props.handleDropdownChange} >
       <option value="High" >High</option>
@@ -27,7 +34,9 @@ export function Step2(props) {
       <option value="Low" >Low</option>
      <option value="Lowest">Lowest</option>
       </select>
-      <div>
+    </div>
+      
+    <div>
       <p>OldPrice : </p>
       <input 
         className="OldPrice"
@@ -38,13 +47,15 @@ export function Step2(props) {
         value={props.op}
         onChange={props.handleChange}
         />
-      </div>
-      <div>
+    </div>
+
+  <div>
       <p>Enter Comments : </p>
     <textarea id ="Text" name="Text" value ={props.text} onChange={props.handleChange} rows="4" cols="50" placeholder="enter comments">Product Overview</textarea>
-    </div>
-      </div>
-      </form>
-    </div> 
+</div>
+
+
+</form>
+</div> 
   );
 }

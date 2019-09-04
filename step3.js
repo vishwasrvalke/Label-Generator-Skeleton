@@ -7,10 +7,12 @@ export function Step3(props) {
   } 
   return(
 
-    <div >
+  <div>
        <h2>Specifications</h2>
       <p>ColorFamily : </p>
-      <form >
+  <form >
+    
+    <div>
         Red
       <input
         className="ColorFamily"
@@ -38,7 +40,10 @@ export function Step3(props) {
         value="Green"
         onChange={props.handleChange}
         />
-        <div>
+    </div>
+        
+        
+    <div>
         <p>Manufacturer : </p>
       <input
         className="Manufacturer"
@@ -49,9 +54,11 @@ export function Step3(props) {
         value={props.m}
         onChange={props.handleChange}
         /> 
-        </div>
-        <div>
-        <p>Type : </p>
+   </div>
+
+
+  <div>
+    <p>Type : </p>
         
       1
       <input
@@ -60,7 +67,7 @@ export function Step3(props) {
         name="Type"
         type="checkbox"
         value="1"
-        onChange={props.handleChange}
+        onChange={props.handleCheckboxChange}
         /> 
 
       2
@@ -70,7 +77,7 @@ export function Step3(props) {
         name="Type"
         type="checkbox"
         value="2"
-        onChange={props.handleChange}
+        onChange={props.handleCheckboxChange}
         /> 
 
       3
@@ -80,7 +87,7 @@ export function Step3(props) {
         name="Type"
         type="checkbox"
         value="3"
-        onChange={props.handleChange}
+        onChange={props.handleCheckboxChange}
         /> 
 
       4
@@ -90,12 +97,13 @@ export function Step3(props) {
         name="Type"
         type="checkbox"
         value="4"
-        onChange={props.handleChange}
+        onChange={props.handleCheckboxChange}
         /> 
+  </div> 
+        
+</form>        
 
-        </div> 
-        </form>        
-    </div>
+</div>
 
     
   );

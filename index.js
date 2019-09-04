@@ -34,7 +34,7 @@ class MasterForm extends React.Component {
       
         ColorFamily:'',
         Manufacturer: '',
-        Type:'',
+        Type:[],
       
 
       
@@ -55,6 +55,7 @@ class MasterForm extends React.Component {
      
      this.handleChange = this.handleChange.bind(this);
      this.handleDropdownChange = this.handleDropdownChange.bind(this);
+     this.handleCheckboxChange= this.handleCheckboxChange.bind(this);
   }
   handleChange = event => {
     const { name, value } = event.target
@@ -65,6 +66,20 @@ class MasterForm extends React.Component {
   
   handleDropdownChange =(e)=> {
     this.setState({Price : e.target.value });
+  }
+
+  handleCheckboxChange = (e1)=> {
+    let type = this.state.Type 
+    let i
+    if (e1.target.checked) {
+      type.push(e1.target.value)
+    }
+    else{
+      i= type.indexOf(e1.target.value)
+          type.splice(i,1)
+    }
+    this.setState({Type:type})
+    
   }
 
   
@@ -146,6 +161,7 @@ class MasterForm extends React.Component {
             c={this.state.ColorFamily}
             m= {this.state.Manufacturer}
             t={this.state.Type}
+            handleCheckboxChange={this.handleCheckboxChange}
           />
           <Step4
             currentStep={this.state.currentStep}

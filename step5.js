@@ -7,10 +7,13 @@ export function Step5(props) {
   } 
   
   return(
+    
     <div>
     <h2>To Address Details</h2>
     <form >
       <p>Name : </p>
+      
+      <div>
       <input
         className="toName"
         id="toName"
@@ -20,7 +23,9 @@ export function Step5(props) {
         value={props.toname}
         onChange={props.handleChange}
         />
-        <div>
+      </div>
+        
+      <div>
         <p>Address : </p>
       <input
         className="toAddr"
@@ -31,10 +36,11 @@ export function Step5(props) {
         value={props.toAddress}
         onChange={props.handleChange}
         /> 
-        </div>
-        <div>
+      </div>
+        
+      <div>
         <p>Province : </p>
-      <input
+       <input
         className="toProvince"
         id="toProvince"
         name="toProvince"
@@ -43,8 +49,9 @@ export function Step5(props) {
         value={props.topro}
         onChange={props.handleChange}
         /> 
-        </div>
-        <div>
+      </div>
+        
+      <div>
         <p>ZipCode : </p>
       <input
         className="toZipCode"
@@ -56,7 +63,8 @@ export function Step5(props) {
         onChange={props.handleChange}
         inputMode="numeric" 
         /> 
-       </div>   
+      </div>   
+      
       </form>         
     </div>
 

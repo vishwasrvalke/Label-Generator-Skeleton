@@ -11,14 +11,16 @@ export function Step6(props) {
     return null
   } 
   return(
-    <div >
+  
+<div >
      <h2>Summary </h2>
      <h3>From: {props.address} </h3>
      
      <h3>To: {props.toAddress}</h3>
 
      <h2>Product Details</h2>
-  <div>   
+  
+<div>   
  <table>
     <thead>
       <tr>
@@ -64,16 +66,18 @@ export function Step6(props) {
     <tbody>
       <tr>
       <td>{props.c}</td>
-        <td>{props.m}</td>
-        <td>{props.t}</td>  
+      <td>{props.m}</td>
+      <td>{props.t}</td>  
       </tr>
     </tbody>
   </table>
 </div>
+
 <div>
 <h2>Comments: </h2>
 <p>{props.text}</p>
 </div>
-    </div>
+
+</div>
   )
 }

@@ -6,9 +6,12 @@ export function Step1(props) {
     return null
   } 
   return(
-    <div >
+  <div >
     <h2>Product Details </h2>
+   
     <form >
+    
+      <div>
       <p>Product Name :</p>
       <input
         className="ProductName"
@@ -19,6 +22,8 @@ export function Step1(props) {
         value={props.pn}
         onChange={props.handleChange}
         />
+      </div>
+
       <div>
       <p>ITEM ID : </p>
       <input
@@ -31,6 +36,7 @@ export function Step1(props) {
         onChange={props.handleChange}
         />
       </div>
+
       <div>
       <p>MFR No. : </p>
       <input
@@ -43,6 +49,7 @@ export function Step1(props) {
         onChange={props.handleChange}
         />
       </div> 
+
       </form>  
     </div>
   );
