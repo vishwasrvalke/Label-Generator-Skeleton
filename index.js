@@ -82,6 +82,11 @@ class MasterForm extends React.Component {
     
   }
 
+  handleSubmit = (e)=> {
+    e.preventDefault();
+    console.log('Submitted');
+  }
+
   
 
 
@@ -119,12 +124,22 @@ class MasterForm extends React.Component {
   nextButton() {
     let currentStep = this.state.currentStep;
     if (currentStep < 6) {
-      return (
+      return(
         <button
           
           type="button" onClick={this._next}>
           Next
       </button>
+      )
+    }
+    return null;
+  }
+
+  submit() {
+    let currentStep = this.state.currentStep;
+    if(currentStep === 6) {
+      return(
+        <button type = "button" onClick = {this.handleSubmit}>Submit</button> 
       )
     }
     return null;
@@ -146,6 +161,7 @@ class MasterForm extends React.Component {
             pid = {this.state.ITEMID}
             mfr = {this.state.MFRNo}
           />
+          
           <Step2
             currentStep={this.state.currentStep}
             handleChange={this.handleChange}
@@ -164,6 +180,7 @@ class MasterForm extends React.Component {
             t={this.state.Type}
             handleCheckboxChange={this.handleCheckboxChange}
           />
+
           <Step4
             currentStep={this.state.currentStep}
             handleChange={this.handleChange}
@@ -199,6 +216,7 @@ class MasterForm extends React.Component {
           />
           {this.previousButton()}
           {this.nextButton()}
+          {this.submit()}
 
 
         </form>
