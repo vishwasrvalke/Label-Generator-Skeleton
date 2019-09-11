@@ -24,7 +24,7 @@ class MasterForm extends React.Component {
       
       
         NewPrice: ''
-       , Price:"Low"
+       , Price:'Low'
         , OldPrice: ''
         , Text:'',
 
@@ -88,9 +88,6 @@ class MasterForm extends React.Component {
   }
 
   
-
-
-
   _next = () => {
     let currentStep = this.state.currentStep
     currentStep = 
@@ -112,7 +109,6 @@ class MasterForm extends React.Component {
     if (currentStep !== 1) {
       return (
         <button
-          
           type="button" onClick={this._prev}>
           Previous
       </button>
@@ -126,7 +122,6 @@ class MasterForm extends React.Component {
     if (currentStep < 6) {
       return(
         <button
-          
           type="button" onClick={this._next}>
           Next
       </button>
@@ -153,7 +148,7 @@ class MasterForm extends React.Component {
         <h2>Step {this.state.currentStep} </h2>
 
         <form >
-        
+      
           <Step1
             currentStep={this.state.currentStep}
             handleChange={this.handleChange}
