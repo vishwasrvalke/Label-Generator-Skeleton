@@ -10,62 +10,62 @@ export function Step4(props) {
     <div >
       <h2>From Address Details</h2>
       <p>Name : </p>
-      
-      <form >
-      
-      <div>
-      <input
-        className="Name"
-        id="Name"
-        name="Name"
-        type="text"
-        placeholder="Enter Name"
-        value={props.name}
-        onChange={props.handleChange}
-      />
-      </div>
 
-      <div>
-        <p>Address : </p>
-        <input
-          className="Address"
-          id="Address"
-          name="Address"
-          type="text"
-          placeholder="Enter Address"
-          value={props.address}
-          onChange={props.handleChange}
-        />
-      </div>
-      
-      <div>
-        <p>Province : </p>
-        <input
-          className="Province"
-          id="Province"
-          name="Province"
-          type="text"
-          placeholder="Enter Province"
-          value={props.pro}
-          onChange={props.handleChange}
-        />
-      </div>
-      
-      <div>
-        <p>ZipCode : </p>
-        <input
-          className="ZipCode"
-          id="ZipCode"
-          name="ZipCode"
-          type="numbers"
-          placeholder="Enter ZipCode(numbers only)"
-          value={props.zip}
-          onChange={props.handleChange}
-          inputMode="numeric"
-          
-        />
-      </div>
-      
+      <form >
+
+        <div>
+          <input
+            className="Name"
+            id="Name"
+            name="Name"
+            type="text"
+            placeholder="Enter Name"
+            value={props.name}
+            onChange={props.handleChange}
+          />
+        </div>
+
+        <div>
+          <p>Address : </p>
+          <input
+            className="Address"
+            id="Address"
+            name="Address"
+            type="text"
+            placeholder="Enter Address"
+            value={props.address}
+            onChange={props.handleChange}
+          />
+        </div>
+
+        <div>
+          <p>Province : </p>
+          <input
+            className="Province"
+            id="Province"
+            name="Province"
+            type="text"
+            placeholder="Enter Province"
+            value={props.pro}
+            onChange={props.handleChange}
+          />
+        </div>
+
+        <div>
+          <p>ZipCode : </p>
+          <input
+            className="ZipCode"
+            id="ZipCode"
+            name="ZipCode"
+            type="numbers"
+            placeholder="Enter ZipCode(numbers only)"
+            value={props.zip}
+            onChange={props.handleChange}
+            inputMode="numeric"
+
+          />
+        </div>
+
       </form>
     </div>
 

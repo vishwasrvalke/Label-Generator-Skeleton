@@ -14,48 +14,48 @@ class MasterForm extends React.Component {
     this.state = {
       currentStep: 1,
 
-      
-  
-        ProductName: '',
-        ITEMID: '',
-        MFRNo: '',
-      
 
-      
-      
-        NewPrice: ''
-       , Price:'Low'
-        , OldPrice: ''
-        , Text:'',
 
-      
+      ProductName: '',
+      ITEMID: '',
+      MFRNo: '',
 
-      
-      
-        ColorFamily:'',
-        Manufacturer: '',
-        Type:[],
-      
 
-      
-      
-        Name: '',
-        Address: '',
-        Province: '',
-        ZipCode: '',
-      
 
-      
-        toName: '',
-        toAddr: '',
-        toProvince: '',
-        toZipCode: '',
-      
+
+      NewPrice: ''
+      , Price: 'Low'
+      , OldPrice: ''
+      , Text: '',
+
+
+
+
+
+      ColorFamily: '',
+      Manufacturer: '',
+      Type: [],
+
+
+
+
+      Name: '',
+      Address: '',
+      Province: '',
+      ZipCode: '',
+
+
+
+      toName: '',
+      toAddr: '',
+      toProvince: '',
+      toZipCode: '',
+
     }
-     
-     this.handleChange = this.handleChange.bind(this);
-     this.handleDropdownChange = this.handleDropdownChange.bind(this);
-     this.handleCheckboxChange= this.handleCheckboxChange.bind(this);
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleDropdownChange = this.handleDropdownChange.bind(this);
+    this.handleCheckboxChange = this.handleCheckboxChange.bind(this);
   }
   handleChange = event => {
     const { name, value } = event.target
@@ -63,45 +63,45 @@ class MasterForm extends React.Component {
       [name]: value
     })
   }
-  
-  handleDropdownChange =(e)=> {
-    this.setState({Price : e.target.value });
+
+  handleDropdownChange = (e) => {
+    this.setState({ Price: e.target.value });
   }
 
-  handleCheckboxChange = (e1)=> {
-    let type = this.state.Type 
+  handleCheckboxChange = (e1) => {
+    let type = this.state.Type
     let i
     if (e1.target.checked) {
       type.push(e1.target.value)
     }
-    else{
-      i= type.indexOf(e1.target.value)
-          type.splice(i,1)
+    else {
+      i = type.indexOf(e1.target.value)
+      type.splice(i, 1)
     }
-    this.setState({Type:type})
-    
+    this.setState({ Type: type })
+
   }
 
-  handleSubmit = (e)=> {
+  handleSubmit = (e) => {
     e.preventDefault();
     console.log('Submitted');
   }
 
-  
+
   _next = () => {
     let currentStep = this.state.currentStep
-    currentStep = 
-    this.setState({
-      currentStep: currentStep +1
-    })
+    currentStep =
+      this.setState({
+        currentStep: currentStep + 1
+      })
   }
 
   _prev = () => {
     let currentStep = this.state.currentStep
-    currentStep = 
-    this.setState({
-      currentStep: currentStep - 1
-    })
+    currentStep =
+      this.setState({
+        currentStep: currentStep - 1
+      })
   }
 
   previousButton() {
@@ -120,7 +120,7 @@ class MasterForm extends React.Component {
   nextButton() {
     let currentStep = this.state.currentStep;
     if (currentStep < 6) {
-      return(
+      return (
         <button
           type="button" onClick={this._next}>
           Next
@@ -132,31 +132,31 @@ class MasterForm extends React.Component {
 
   submit() {
     let currentStep = this.state.currentStep;
-    if(currentStep === 6) {
-      return(
-        <button type = "button" onClick = {this.handleSubmit}>Submit</button> 
+    if (currentStep === 6) {
+      return (
+        <button type="button" onClick={this.handleSubmit}>Submit</button>
       )
     }
     return null;
   }
 
   render() {
-    
+
     return (
       <React.Fragment>
         <h1>Label Generator</h1>
         <h2>Step {this.state.currentStep} </h2>
 
         <form >
-      
+
           <Step1
             currentStep={this.state.currentStep}
             handleChange={this.handleChange}
             pn={this.state.ProductName}
-            pid = {this.state.ITEMID}
-            mfr = {this.state.MFRNo}
+            pid={this.state.ITEMID}
+            mfr={this.state.MFRNo}
           />
-          
+
           <Step2
             currentStep={this.state.currentStep}
             handleChange={this.handleChange}
@@ -164,14 +164,14 @@ class MasterForm extends React.Component {
             p={this.state.Price}
             op={this.state.OldPrice}
             text={this.state.Text}
-            handleDropdownChange = {this.handleDropdownChange}
-            
+            handleDropdownChange={this.handleDropdownChange}
+
           />
           <Step3
             currentStep={this.state.currentStep}
             handleChange={this.handleChange}
             c={this.state.ColorFamily}
-            m= {this.state.Manufacturer}
+            m={this.state.Manufacturer}
             t={this.state.Type}
             handleCheckboxChange={this.handleCheckboxChange}
           />
@@ -181,8 +181,8 @@ class MasterForm extends React.Component {
             handleChange={this.handleChange}
             name={this.state.Name}
             address={this.state.Address}
-            pro = {this.state.Province}
-            zip = {this.state.ZipCode}
+            pro={this.state.Province}
+            zip={this.state.ZipCode}
           />
           <Step5
             currentStep={this.state.currentStep}
@@ -195,17 +195,17 @@ class MasterForm extends React.Component {
           <Step6
             currentStep={this.state.currentStep}
             pn={this.state.ProductName}
-            pid = {this.state.ITEMID}
-            mfr = {this.state.MFRNo}
+            pid={this.state.ITEMID}
+            mfr={this.state.MFRNo}
             address={this.state.Address}
             toAddress={this.state.toAddr}
             np={this.state.NewPrice}
             p={this.state.Price}
             op={this.state.OldPrice}
             c={this.state.ColorFamily}
-            m= {this.state.Manufacturer}
+            m={this.state.Manufacturer}
             t={this.state.Type}
-            text ={this.state.Text}
+            text={this.state.Text}
             handleChange={this.handleChange}
 
           />
