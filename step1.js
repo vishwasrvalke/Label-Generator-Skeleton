@@ -9,7 +9,7 @@ export function Step1(props) {
     <div >
       <h2>Product Details </h2>
 
-      <form >
+      
 
         <div>
           <p>Product Name :</p>
@@ -50,7 +50,7 @@ export function Step1(props) {
           />
         </div>
 
-      </form>
+      
     </div>
   );
 }

@@ -10,7 +10,7 @@ export function Step3(props) {
     <div>
       <h2>Specifications</h2>
       <p>ColorFamily : </p>
-      <form >
+      
 
         <div>
           Red
@@ -101,7 +101,7 @@ export function Step3(props) {
           />
         </div>
 
-      </form>
+    
 
     </div>
 

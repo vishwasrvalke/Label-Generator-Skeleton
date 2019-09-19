@@ -11,7 +11,7 @@ export function Step4(props) {
       <h2>From Address Details</h2>
       <p>Name : </p>
 
-      <form >
+      
 
         <div>
           <input
@@ -66,7 +66,7 @@ export function Step4(props) {
           />
         </div>
 
-      </form>
+      
     </div>
 
   );

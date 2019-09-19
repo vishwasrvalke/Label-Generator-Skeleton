@@ -10,7 +10,7 @@ export function Step5(props) {
 
     <div>
       <h2>To Address Details</h2>
-      <form >
+      
         <p>Name : </p>
 
         <div>
@@ -65,7 +65,7 @@ export function Step5(props) {
           />
         </div>
 
-      </form>
+      
     </div>
 
 

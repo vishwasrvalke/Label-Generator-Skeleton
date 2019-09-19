@@ -10,7 +10,7 @@ export function Step2(props) {
       <h2>Pricing</h2>
       <p>New Price :</p>
 
-      <form >
+      
 
         <div>
           <input
@@ -53,7 +53,7 @@ export function Step2(props) {
           <p>Enter Comments : </p>
           <textarea id="Text" name="Text" value={props.text} onChange={props.handleChange} rows="4" cols="50" placeholder="Enter Comments Briefly">Product Overview</textarea>
         </div>
-      </form>
+      
     </div>
   );
 }
