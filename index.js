@@ -132,7 +132,8 @@ class MasterForm extends React.Component {
 
   submit() {
     let currentStep = this.state.currentStep;
-    if (currentStep === 6) {
+    if (currentStep === 6) 
+    {
       return (
         <button type="button" onClick={this.handleSubmit}>Submit</button>
       )
